@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+    <script src="jscript.js"></script>
+    <title>BookMyTrip</title>
+</head>
+<body background="mountain.jpg">
+<div>
+<nav class="navbar navbar-expand-sm bg-danger navbar-dark">
+
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <a class="navbar-brand" href="#">
+                <img src="trip.png" alt="logo" style="width:auto;height: 40px">
+            </a>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white;">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Cars.html">Cars</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Buses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Hotels</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Train Tickets</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Flight Tickets</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container-fluid">
+        <ul class="navbar-nav ml-auto ">
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="getLocation()" id="demo" >
+                    <img src="locate.png" alt="logo" style="width:30px">
+                </a>
+            </li>
+          <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    <img src="location.png" alt="logo" style="width:30px">
+                    Region
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#">Delhi</a>
+                    <a class="dropdown-item" href="#">Mumbai</a>
+                    <a class="dropdown-item" href="#">Chennai</a>
+                    <a class="dropdown-item" href="#">Kolkata</a>
+                    <a class="dropdown-item" href="#">Banglore</a>
+                    <a class="dropdown-item" href="#">Hydrabad</a>
+
+                </div>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    <img src="profile.png" alt="logo" style="width:40px">
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="Login.html">Sign In</a>
+                    <a class="dropdown-item" href="SignUp.html">Sign Up</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div style="margin-top: 80px">
+    <h1 style="display: flex;justify-content: center">Book My Trip</h1>
+        <div class="container mt-3">
+            <form>
+              <div class="d-flex mb-5">
+                <div class="p-2 flex-fill bg-danger" style="justify-content: center;align-items: center; display: flex;">
+                    <select name="city" class="custom-select">
+                        <option selected>FROM</option>
+                        <option value="DELHI">DELHI</option>
+                        <option value="MUMBAI">MUMBAI</option>
+                        <option value="KOLKATA">KOLKATA</option>
+                        <option value="BANGLORE">BANGLORE</option>
+                        <option value="HYDRABAD">HYDRABAD</option>
+
+                    </select>
+                </div>
+                <div class="p-2 flex-fill bg-secondary" style="justify-content: center;align-items: center; display: flex;">
+                    <select name="city" class="custom-select">
+                        <option selected>TO</option>
+                        <option value="DELHI">DELHI</option>
+                        <option value="MUMBAI">MUMBAI</option>
+                        <option value="KOLKATA">KOLKATA</option>
+                        <option value="BANGLORE">BANGLORE</option>
+                        <option value="HYDRABAD">HYDRABAD</option>
+
+                    </select>
+                </div>
+                <div class="p-2 flex-fill bg-danger" style="justify-content: center;align-items: center; display: flex;">
+                    <input type="date" placeholder="ONWARD" class="custom-select">
+                </div>
+                <div class="p-2 flex-fill bg-secondary" style="justify-content: center;align-items: center; display: flex;">
+                    <input type="date" placeholder="RETURN" class="custom-select">
+                </div>
+                  <div class="p-2 flex-fill bg-danger" style="justify-content: center;align-items: center; display: flex;">
+                      <input type="submit" class="btn btn-info" value="SEARCH">
+                  </div>
+                </div>
+          </form>
+        </div>
+            <div class="container" style="margin-top: 200px;display:flex;justify-content: center;color: #f1f1f1" >
+                <h2>BookMyTrip Special</h2>
+            </div>
+            <div style="display: flex;justify-content: center;">
+                <div class="jumbotron" style="width: 800px;display: flex;justify-content: center;justify-items: center">
+                    <div class="card" style="width:200px;margin: auto;background-color: #dc3545;color: white;text-align: center;">
+                        <div class="card-body">
+                            <h4 class="card-title" style="align-content: center">Leh</h4>
+                        </div>
+                        <img class="card-img" src="leh.jpg" alt="Card image" style="width:100%">
+                        <a href="#" class="btn btn-primary">BOOK NOW</a>
+                    </div>
+                    <div class="card" style="width:200px;margin: auto;background-color: #dc3545;color: white;text-align: center;">
+                    <div class="card-body">
+                        <h4 class="card-title">Manali</h4>
+                    </div>
+                    <img class="card-img" src="manali.jpg" alt="Card image" style="width:100%">
+                    <a href="#" class="btn btn-primary">BOOK NOW</a>
+                </div>
+                    <div class="card" style="width:200px;margin: auto;background-color: #dc3545;color: white;text-align: center;">
+                        <div class="card-body">
+                            <h4 class="card-title" style="align-content: center">Nanital</h4>
+                        </div>
+                        <img class="card-img" src="nanital.jpg" alt="Card image" style="width:100%">
+                        <a href="#" class="btn btn-primary">BOOK NOW</a>
+                    </div>
+               </div>
+            </div>
+           <div>
+               <div>
+                   <h1 style="text-align: center;margin-top: 100px;color: white">Our Global Presence</h1>
+               </div>
+               <div class="jumbotron jumbotron-fluid" style="display: flex;margin: auto;flex-flow: row wrap;justify-content: space-around;align-content: center;">
+                   <div class="thumbnail" style="margin: auto;">
+                       <a href="#">
+                           <img src="india.jpg" alt="India" style="width:200px;height: 120px">
+                           <div class="caption">
+                               <p style="text-align:center;">India</p>
+                           </div>
+                       </a>
+                   </div>
+                   <div class="thumbnail" style="margin: auto;">
+                       <a href="#">
+                           <img src="indonesia.jpg" alt="Indonesia" style="width:200px;height: 120px">
+                               <p style="text-align:center;">Indonesia</p>
+                       </a>
+                   </div>
+                   <div class="thumbnail" style="margin: auto;">
+                       <a href="#">
+                           <img src="colombia.png" alt="colombia" style="width:200px;height: 120px">
+                           <div class="caption" style="text-align: center;">
+                               <p style="text-align: center;">Colombia</p>
+                           </div>
+                       </a>
+                   </div>
+                   <div class="thumbnail" style="margin: auto;">
+                       <a href="#">
+                           <img src="singapore.jpg" alt="India" style="width:200px;height: 120px">
+                           <div class="caption">
+                               <p style="text-align:center;">Singapore</p>
+                           </div>
+                       </a>
+                   </div>
+               </div>
+           </div>
+</div>
+    <!-- Footer -->
+    <footer style="background-color: #dc3545;position: sticky">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="https://mdbootstrap.com/bootstrap-tutorial/"> bookmytrip.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+</body>
+</html>

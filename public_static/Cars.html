@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <script src="date.js"></script>
+    <script src="car-selection.js"></script>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-sm bg-danger navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">
+        <img src="images1.jpg" alt="logo" style="width:40px;">
+    </a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">powered by BookMyTrip</a>
+        </li>
+
+    </ul>
+</nav>
+<div class = "container outer" style="margin: 80px;" >
+    <div class = "jumbotron" style="padding: 10px" >
+        <h1><span>Book Affordable Outstation & Airport Cabs</span></h1>
+        <h5 style="-webkit-text-fill-color: darkgray;"><span>AC cars driven by trusted chauffeurs at your door step</span></h5>
+        <br>
+        <br>
+    <form class="form-inline">
+        <label class="mr-sm-2">Pickup From:</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="source" placeholder="Pickup location">
+        <label class="mr-sm-2">Dropping Off To:</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="destination" placeholder="Drop-Off-location">
+    </form>
+        <br>
+        <form class="form-inline" action="Car-Selection.html">
+            <div class="form-group"> <!-- Date input -->
+                <label class="control-label mr-sm-2" for="date">Choose Date:</label>
+                <input type="text" id="date" name="date" placeholder="Onward">
+            </div>
+        <br><br><br><br>
+           <button type="submit" class="btn btn-danger mb-2 btn-block">Submit</button>
+        </form>
+
+</div>
+</div>
+</body>
+</html>
